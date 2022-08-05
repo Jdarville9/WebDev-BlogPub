@@ -41,6 +41,8 @@ router.get("/login", (req, res) => {
     return;
   }
 
+  console.log("you logged in BOI!!");
+
   res.render("login");
 });
 
