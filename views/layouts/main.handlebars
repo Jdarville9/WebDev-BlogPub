@@ -22,9 +22,12 @@
 
         <a class="nav-link" href="/dashboard">Dashboard</a>
 
-        <button><a class="nav-link" href="/login">Login</a></button>
+        {{#if loggedIn}}
+          <button class="nav-link" id="logout">Logout</button>
+        {{else}}
+          <button><a class="nav-link" href="/login">Login</a></button>
+        {{/if}}
 
-        <button class="nav-link" id="logout">Logout</button>
       </div>
     </nav>
     <main>
@@ -40,6 +43,7 @@
       </div>
     </footer>
   </body>
-
-  <script src="/javascript/logout.js"></script>
+  {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+  {{/if}}
 </html>
