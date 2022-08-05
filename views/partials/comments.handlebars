@@ -1,0 +1,10 @@
+<h1 class="text-white">Comments</h1>
+{{#each this}}
+  <div class="comment mt-2 p-2 text-justify bg-white float-left">
+    <h4>{{user.username}}</h4>
+    </br>
+      <p>{{comment_text}}</p>
+    <small class="card-text text-muted">Posted @
+      {{created_at}}</small>
+  </div>
+{{/each}}
