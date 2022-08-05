@@ -14,7 +14,7 @@ async function loginFormHandler(event) {
     if (response.ok) {
       document.location.replace("/dashboard");
     } else {
-      alert(response.statusText);
+      alert("You ain't logged in fool");
     }
   }
 }
@@ -37,7 +37,7 @@ async function registerFormHandler(event) {
     if (response.ok) {
       document.location.replace("/dashboard");
     } else {
-      alert(response.statusText);
+      alert("Your registration messed up fool");
     }
   }
 }
