@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div class="col-5">
+      
+    </div>
+  </div>
+  <div class="row" >
+    <div class="col-5 mt-5 ml-5">
+      <div>
+        <input type="text" size="51" value="{{post.title}}" id="edit-title" class="mb-2">
+        <textarea cols="50" rows="5" size="40" id="edit-content">{{post.content}}</textarea>
+      </div>
+      <div class="mt-2">
+        <button type="submit" id="update-button" class="btn btn-success mr-4">Update Blorg</button>
+        <button type="submit" id="delete-button" class="btn btn-danger mr-4">Delete Blorg</button>
+        <a href="/dashboard"><button class="btn btn-primary">NVM, Go Back</button></a>
+      </div>      
+      <form id="comment-form">
+        <div class="form-group mt-5">
+          <h4 class="text-white">Leave a comment</h4>
+          <label for="comment" class="text-white">Message</label>
+          <textarea
+            name="comment"
+            id="comment-text"
+            cols="30"
+            rows="5"
+            class="form-control bg-white"
+            style="background-color: black;"
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">Add Comment</button>
+        </div>
+      </form>
+      {{> comments post.comments}}
+    </div>
+  </div>
+  
+</div>
+
+<script src="/javascript/comment.js"></script>
+<script src="/javascript/edit-post.js"></script>
+<script src="/javascript/delete-post.js"></script>

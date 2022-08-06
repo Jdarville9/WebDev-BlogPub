@@ -1,14 +1,13 @@
 const path = require("path");
 const express = require("express");
 const exhbs = require("express-handlebars");
-const helpers = require("./utils/helpers");
 const sequelize = require("./config/connection");
 const session = require("express-session");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-const hbs = exhbs.create({ helpers });
+const hbs = exhbs.create({});
 
 const sess = {
   secret: "The most secret of all the secrets",

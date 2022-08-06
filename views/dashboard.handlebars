@@ -4,30 +4,31 @@
       <div class="col-sm-5 col-md-6 col-12 pb-4 mt-4">
         <h3 class="text-white">Your Blorgs</h3>
         {{#each posts}}
-          <div class="comment mb-4 text-justify bg-white float-left">
-            <h4>{{user.username}}</h4>
+          <div class="comment mb-4 p-2 text-justify bg-white float-left">
+            <h4 class="float-right">{{user.username}}</h4>
             </br>
-            {{#each comments}}
-              <p>{{comment_text}}</p>
-            {{/each}}
+            <h5>{{title}}</h5>
+            </br>
+            <p>{{content}}</p>
             <small class="card-text text-muted">Posted @
               {{created_at}}</small>
+            <a href="/dashboard/edit/{{id}}">Edit Blorg</a>
           </div>
         {{/each}}
+        
       </div>
       <div
         class="col-lg-4 col-md-5 col-sm-4 offset-md-1 offset-sm-1 col-12 mt-4"
       >
-        <form id="algin-form" class="add-post-form">
+        <form class="add-post-form">
           <div class="form-group">
             <h4 class="text-white">Create new Blorg</h4>
-            <input placeholder="Title" size="40"/>
+            <input placeholder="Title" id="title" size="40"/>
             </br>
             </br>
             <textarea
               name="msg"
-              id=""
-              msg
+              id="content"
               cols="30"
               rows="5"
               size="40"
@@ -44,3 +45,5 @@
     </div>
   </div>
 </section>
+
+<script src="/javascript/add-post.js"></script>
