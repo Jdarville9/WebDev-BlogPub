@@ -17,15 +17,6 @@ if (process.env.JAWSDB_URL) {
       port: 3306,
     }
   );
-
-  const connDB = sequelize
-    .authenticate()
-    .then(function () {
-      console.log("Connected Successfully!");
-    })
-    .catch(function (err) {
-      console.log("Connection Failed!");
-    });
 }
 
 module.exports = sequelize;
